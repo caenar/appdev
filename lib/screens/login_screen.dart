@@ -16,7 +16,27 @@ class LoginScreen extends StatelessWidget {
         labelText: 'Username / Email',
         border: OutlineInputBorder(),
        ),
-      )
+      ),
+      SizedBox(height: 10.0),
+      TextFormField(
+       decoration: InputDecoration(
+        labelText: 'Username / Email',
+        border: OutlineInputBorder(),
+       ),
+      ),
+      SizedBox(height: 50.0),
+      ElevatedButton(
+      child: Text('Log in'),
+      onPressed: () => {
+        },
+      ),
+      SizedBox(height: 10.0),
+      RichText(text: TextSpan(
+        children: const<TextSpan>[
+        TextSpan(text: "Don't have an account?"),
+        TextSpan(text: "Sign up")
+        ]
+        ))
       ],
       ) 
      )
