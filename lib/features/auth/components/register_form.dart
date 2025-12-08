@@ -1,4 +1,5 @@
 import 'package:app_dev_finals/features/auth/screens/login_screen.dart';
+import 'package:app_dev_finals/shared/constants/spacing.dart';
 import 'package:app_dev_finals/shared/widgets/app_button.dart';
 import 'package:app_dev_finals/shared/widgets/app_textfield.dart';
 import 'package:app_dev_finals/shared/widgets/clickable_text.dart';
@@ -16,18 +17,18 @@ class RegisterForm extends StatelessWidget {
           "What's your email?",
           style: Theme.of(context).textTheme.headlineMedium,
         ),
-        SizedBox(height: 8),
+        SizedBox(height: AppSpacing.sm),
         Text(
           "Enter the email where you can be contacted. "
           "No one will see this on your profile.",
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        SizedBox(height: 26),
+        SizedBox(height: AppSpacing.lg),
 
         AppTextField(hintText: 'Email'),
-        SizedBox(height: 22),
+        SizedBox(height: AppSpacing.lg),
         AppButton(text: 'Next'),
-        SizedBox(height: 8),
+        SizedBox(height: AppSpacing.sm),
         AppButton(
           text: 'Sign up with mobile number',
           variant: ButtonVariant.outline,
@@ -39,7 +40,7 @@ class RegisterForm extends StatelessWidget {
             text: 'I already have an account',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.blue.shade800,
+              color: Theme.of(context).colorScheme.tertiary,
             ),
             onPress: () {
               Navigator.of(

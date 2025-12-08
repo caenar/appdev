@@ -1,4 +1,5 @@
 import 'package:app_dev_finals/features/auth/screens/register_screen.dart';
+import 'package:app_dev_finals/shared/constants/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:app_dev_finals/shared/widgets/app_button.dart';
 import 'package:app_dev_finals/shared/widgets/clickable_text.dart';
@@ -27,18 +28,12 @@ class LoginForm extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: [
                 AppTextField(hintText: 'Username, email, or mobile number'),
-                SizedBox(height: 12),
+                SizedBox(height: AppSpacing.md),
                 AppTextField(hintText: 'Password', obscureText: true),
-                SizedBox(height: 12),
+                SizedBox(height: AppSpacing.md),
                 AppButton(text: 'Log In'),
-                SizedBox(height: 16),
-                ClickableText(
-                  text: 'Forgot password?',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                  ),
-                ),
+                SizedBox(height: AppSpacing.lg),
+                ClickableText(text: 'Forgot password?'),
               ],
             ),
           ),
@@ -49,8 +44,8 @@ class LoginForm extends StatelessWidget {
           child: AppButton(
             text: 'Create new account',
             variant: ButtonVariant.outline,
-            fontColor: Colors.blue.shade900,
-            outlineColor: Colors.blue.shade900,
+            fontColor: Theme.of(context).colorScheme.tertiary,
+            outlineColor: Theme.of(context).colorScheme.tertiary,
             onPressed: () {
               Navigator.of(
                 context,

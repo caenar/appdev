@@ -1,5 +1,6 @@
 import 'package:app_dev_finals/features/auth/screens/login_screen.dart';
 import 'package:app_dev_finals/features/auth/screens/register_screen.dart';
+import 'package:app_dev_finals/shared/constants/spacing.dart';
 import 'package:app_dev_finals/shared/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class OnboardingContent extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SizedBox(height: 50.0),
+        SizedBox(height: AppSpacing.xl),
 
         // just for fun
         Text('English (US)', style: Theme.of(context).textTheme.bodySmall),
@@ -24,7 +25,7 @@ class OnboardingContent extends StatelessWidget {
                 'Join Instagram',
                 style: Theme.of(context).textTheme.displayMedium,
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: AppSpacing.sm),
               Text(
                 "Share what you're into with the people who get you.",
                 style: Theme.of(context).textTheme.bodyMedium,
@@ -42,7 +43,7 @@ class OnboardingContent extends StatelessWidget {
             ).push(MaterialPageRoute(builder: (context) => RegisterScreen()));
           },
         ),
-        SizedBox(height: 8.0),
+        SizedBox(height: AppSpacing.sm),
         AppButton(
           text: 'I already have an account',
           variant: ButtonVariant.outline,

@@ -19,17 +19,19 @@ class AppTextField extends StatelessWidget {
       obscureText: obscureText,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyle(fontSize: 14),
+        hintStyle: Theme.of(
+          context,
+        ).textTheme.bodyMedium?.copyWith(color: const Color(0xFF424D64)),
         contentPadding: const EdgeInsets.symmetric(
-          vertical: 18,
-          horizontal: 14,
+          vertical: 16.0,
+          horizontal: 14.0,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.0),
+          borderRadius: BorderRadius.circular(14.0),
           borderSide: BorderSide(color: const Color(0xFFC9CDD6), width: 1),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12.0),
+          borderRadius: BorderRadius.circular(14.0),
           borderSide: BorderSide(color: const Color(0xFF2F3033), width: 1),
         ),
       ),

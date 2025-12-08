@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 // foundational settings
 class AppTheme {
+  static const Color highlightColor = Color(0xFF2564D8); // that damn blue
+
   // uh, light theme, was planning to do dark theme, but eh
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
@@ -23,11 +25,10 @@ class AppTheme {
       bodyMedium: TextStyle(fontSize: 14, color: Colors.black54),
     ),
 
-    // just set default padding
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 12.0),
-      ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      tertiary: highlightColor,
     ),
   );
+
+  
 }

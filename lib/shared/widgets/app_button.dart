@@ -47,7 +47,7 @@ class _AppButtonState extends State<AppButton> {
         break;
       case ButtonVariant.filled:
       default:
-        backgroundColor = Color(0xFF2564D8);
+        backgroundColor = Theme.of(context).colorScheme.tertiary;
         border = Border.all(color: Colors.transparent);
         fontColor = Colors.white;
     }

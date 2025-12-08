@@ -1,3 +1,5 @@
+import 'package:app_dev_finals/shared/constants/padding.dart';
+import 'package:app_dev_finals/shared/constants/spacing.dart';
 import 'package:flutter/material.dart';
 
 class ScreenLayout extends StatelessWidget {
@@ -20,7 +22,7 @@ class ScreenLayout extends StatelessWidget {
       resizeToAvoidBottomInset: true, // for responsive resizing
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(18.0),
+          padding: const EdgeInsets.all(AppPadding.lg),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -29,7 +31,7 @@ class ScreenLayout extends StatelessWidget {
                   onTap: () => Navigator.of(context).pop(),
                   child: Icon(Icons.arrow_back),
                 ),
-                SizedBox(height: 14.0,)
+                SizedBox(height: AppSpacing.lg)
               ],
               
               // whole content should take up every space
@@ -37,7 +39,7 @@ class ScreenLayout extends StatelessWidget {
 
               // just for mocking sake
               if (showFooter) ...[
-                SizedBox(height: 18.0),
+                SizedBox(height: AppSpacing.lg),
                 Center(child: Image.asset('assets/images/meta.png', width: 60)),
               ],
             ],
